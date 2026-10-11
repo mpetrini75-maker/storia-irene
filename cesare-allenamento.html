@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#FAF6EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Storia di Irene">
+<script src="alert.js"></script>
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<title>Giulio Cesare e la fine della repubblica — Allenamento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FAF6EE; --card:#FFFFFF; --ink:#2F2A24;
+    --accent:#8E3B46; --accent-soft:#F3E1E3;
+    --green:#3E8E5A; --green-soft:#E2F0E6;
+    --red:#C2492F; --red-soft:#F6E1DB;
+    --blue:#3B6EA5; --blue-soft:#E2ECF5;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; font-family:"Lexend","Trebuchet MS",Verdana,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.7; letter-spacing:0.3px; padding:24px 14px 60px;}
+  .wrap{max-width:620px;margin:0 auto;}
+  .back{display:inline-block;background:var(--accent-soft);color:var(--accent);text-decoration:none;border-radius:12px;padding:8px 16px;font-size:0.98rem;font-weight:bold;margin:0 8px 14px 0;}
+  h1{color:var(--accent);font-size:1.6rem;text-align:center;margin:0 0 6px;}
+  .sub{text-align:center;color:#8a7f70;margin:0 0 26px;font-size:1rem;}
+  .card{background:var(--card);border-radius:18px;padding:22px 20px;margin-bottom:22px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.06);border:1px solid #efe7da;}
+  .card h2{margin:0 0 10px;font-size:1.25rem;color:var(--accent);}
+  .card .lead{color:#8a7f70;margin:0 0 12px;font-size:0.97rem;}
+  .levelbar{margin:0 0 12px;}
+  .lvrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:0.98rem;color:var(--accent);}
+  .lvdots{display:inline-flex;gap:6px;}
+  .lvdot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    background:var(--bg);border:2px solid var(--accent-soft);color:#b9ad9c;font-size:0.85rem;font-weight:bold;}
+  .lvdot.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);}
+  .ex{margin:14px 0;}
+  .qnum{font-weight:bold;color:var(--accent);}
+  .qtext{font-size:1.1rem;margin:6px 0 8px;}
+  .options{display:flex;flex-direction:column;gap:10px;}
+  .opt{background:var(--bg);border:2px solid var(--accent-soft);
+    border-radius:12px;padding:13px 14px;font-size:1.05rem;cursor:pointer;
+    text-align:left;font-family:inherit;color:var(--ink);transition:all .15s;}
+  .opt:hover{border-color:var(--accent);}
+  .opt.correct{background:var(--green-soft);border-color:var(--green);color:var(--green);font-weight:bold;}
+  .opt.wrong{background:var(--red-soft);border-color:var(--red);color:var(--red);}
+  .feedback{margin-top:10px;font-size:1.02rem;font-weight:bold;min-height:24px;}
+  .feedback.ok{color:var(--green);}
+  .feedback.no{color:var(--red);}
+  .progress{text-align:center;font-size:1.05rem;margin:12px 0 0;color:#8a7f70;}
+  .star{font-size:1.4rem;}
+  .match-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px;}
+  .match-col{display:flex;flex-direction:column;gap:10px;}
+  .match-btn{background:var(--bg);border:2px solid var(--accent-soft);border-radius:12px;
+    padding:12px;font-size:0.98rem;cursor:pointer;font-family:inherit;color:var(--ink);
+    display:flex;align-items:center;justify-content:center;text-align:center;gap:6px;transition:all .15s;}
+  .match-btn:hover{border-color:var(--accent);}
+  .match-btn.sel{border-color:var(--blue);background:var(--blue-soft);color:var(--blue);font-weight:bold;}
+  .match-btn.done{background:var(--green-soft);border-color:var(--green);color:var(--green);font-weight:bold;cursor:default;opacity:0.85;}
+  .match-btn.flash{border-color:var(--red);background:var(--red-soft);}
+  .restart{display:inline-block;margin:12px auto 0;background:var(--accent);color:#fff;border:none;
+    border-radius:12px;padding:11px 22px;font-size:1rem;cursor:pointer;font-family:inherit;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; Indice</a><a class="back" href="cesare.html">📖 Ripassa la lezione</a>
+  <h1>🏋️ Giulio Cesare e la fine della repubblica — Allenamento</h1>
+  <p class="sub">Mattoncino 1 · 3 sezioni · 3 livelli ciascuna 💪</p>
+
+  <div class="card">
+    <h2>🧠 1. Domande</h2>
+    <p class="lead">Scegli la risposta giusta. Puoi riprovare finché non la trovi!</p>
+    <div class="levelbar" id="quiz-level"></div>
+    <div id="quiz-box"></div>
+    <div class="progress" id="quiz-prog"></div>
+  </div>
+
+  <div class="card">
+    <h2>✅ 2. Vero o falso</h2>
+    <p class="lead">Leggi la frase e tocca Vero o Falso. Dopo ti dico perché.</p>
+    <div class="levelbar" id="vf-level"></div>
+    <div id="vf-box"></div>
+    <div class="progress" id="vf-prog"></div>
+  </div>
+
+  <div class="card">
+    <h2>🔗 3. Abbina</h2>
+    <p class="lead">Tocca una casella a sinistra, poi la sua coppia a destra. Collega tutte le coppie!</p>
+    <div class="levelbar" id="abbina-level"></div>
+    <div class="match-grid" id="abbina-grid"></div>
+    <div class="progress" id="abbina-prog"></div>
+  </div>
+</div>
+<script>
+window.ALLENAMENTO = {"quiz": [[{"q": "Chi formava il primo triumvirato?", "opts": ["Cesare, Pompeo e Crasso", "Cesare, Bruto e Cicerone", "Pompeo, Crasso e Cleopatra"]}, {"q": "In che anno nasce il primo triumvirato?", "opts": ["60 a.C.", "44 a.C.", "52 a.C."]}, {"q": "Che cosa vuol dire triumvirato?", "opts": ["alleanza di tre uomini", "guerra fra tre città", "tre consoli eletti"]}, {"q": "Che cosa porta Cesare all'alleanza?", "opts": ["i voti della plebe", "l'esercito", "i cavalieri"]}, {"q": "Chi prova a fermare i triumviri e finisce in esilio?", "opts": ["Cicerone", "Bruto", "Vercingetorige"]}], [{"q": "Quale terra conquista Cesare tra il 58 e il 52 a.C.?", "opts": ["la Gallia", "l'Egitto", "la Grecia"]}, {"q": "Chi era Vercingetorige?", "opts": ["il capo dei Galli ribelli", "un senatore romano", "il re d'Egitto"]}, {"q": "Quale città cade nel 52 a.C.?", "opts": ["Alesia", "Farsalo", "Munda"]}, {"q": "Come muore Crasso?", "opts": ["combattendo contro i Parti", "pugnalato in Senato", "in un naufragio"]}, {"q": "Fin dove arriva Cesare a nord?", "opts": ["in Britannia", "in Russia", "in Svezia"]}], [{"q": "Quale fiume attraversa Cesare con l'esercito?", "opts": ["il Rubicone", "il Po", "il Tevere"]}, {"q": "Dove Cesare sconfigge Pompeo nel 48 a.C.?", "opts": ["a Farsalo, in Grecia", "ad Alesia, in Gallia", "a Roma"]}, {"q": "Dove scappa Pompeo, e lì viene ucciso?", "opts": ["in Egitto", "in Spagna", "in Britannia"]}, {"q": "Chi organizza la congiura contro Cesare?", "opts": ["Bruto e Cassio Longino", "Pompeo e Crasso", "Cicerone e Cleopatra"]}, {"q": "Quando muore Cesare?", "opts": ["il 15 marzo 44 a.C.", "il 1 gennaio 60 a.C.", "nel 52 a.C. ad Alesia"]}]], "vf": [[{"q": "Cesare era un capo dei popolari.", "v": true, "perche": "Il gruppo che difendeva la plebe."}, {"q": "Il triumvirato era un'alleanza di tre uomini.", "v": true, "perche": "Cesare, Pompeo e Crasso."}, {"q": "Pompeo portava all'alleanza i voti della plebe.", "v": false, "perche": "Pompeo portava l'esercito; i voti della plebe li portava Cesare."}, {"q": "Grazie all'alleanza Cesare diventa console.", "v": true, "perche": "Console nel 59 a.C."}, {"q": "Cicerone entra nel triumvirato.", "v": false, "perche": "Cicerone li ostacola e viene esiliato."}], [{"q": "Nel 60 a.C. Cesare era il più forte dei tre.", "v": false, "perche": "Era il più debole: non aveva vittorie né un esercito fedele."}, {"q": "Cesare chiede la Gallia per poter fare la guerra.", "v": true, "perche": "Così si costruisce un esercito fedele."}, {"q": "Vercingetorige era un generale romano.", "v": false, "perche": "Era il capo dei Galli ribelli."}, {"q": "La Gallia è più o meno l'attuale Francia.", "v": true, "perche": "Guarda la carta in arancione."}, {"q": "Nel 52 a.C. Cesare è diventato il più forte.", "v": true, "perche": "Ha la Gallia e Crasso è morto."}], [{"q": "Attraversare il Rubicone con l'esercito era vietato.", "v": true, "perche": "Per questo inizia la guerra civile."}, {"q": "Una guerra civile è una guerra contro un popolo straniero.", "v": false, "perche": "È una guerra tra cittadini dello stesso Stato."}, {"q": "Cesare si fa incoronare re.", "v": false, "perche": "Non si fa re: prende tutte le cariche della repubblica."}, {"q": "Cesare porta i senatori da 600 a 900.", "v": true, "perche": "Mette in Senato persone fedeli a lui."}, {"q": "Cesare dà la cittadinanza alla Pianura Padana.", "v": true, "perche": "Cioè alla Gallia Cisalpina."}]], "abbina": [[{"l": "Cesare", "r": "i voti della plebe"}, {"l": "Pompeo", "r": "l'esercito"}, {"l": "Crasso", "r": "i cavalieri"}, {"l": "Cicerone", "r": "esiliato"}, {"l": "Triumvirato", "r": "alleanza di tre"}], [{"l": "Gallia", "r": "conquistata 58-52 a.C."}, {"l": "Vercingetorige", "r": "capo dei Galli"}, {"l": "Alesia", "r": "si arrende nel 52"}, {"l": "Britannia", "r": "l'attuale Inghilterra"}, {"l": "Parti", "r": "uccidono Crasso"}], [{"l": "Rubicone", "r": "inizio della guerra civile"}, {"l": "Farsalo", "r": "Pompeo sconfitto"}, {"l": "Cleopatra", "r": "regina d'Egitto"}, {"l": "Idi di marzo", "r": "15 marzo"}, {"l": "Bruto", "r": "congiurato"}]]};
+</script>
+<script src="allenamento.js"></script>
+<script>
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js'); }
+</script>
+</body>
+</html>
