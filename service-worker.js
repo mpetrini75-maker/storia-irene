@@ -1,6 +1,12 @@
-const CACHE = 'storia-irene-v1';
+const CACHE = 'storia-irene-v2';
 
 const ASSETS = [
+  './img/pax-domus.jpg',
+  './img/pax-impero.jpg',
+  './img/pax-insula.jpg',
+  './img/pax-mietitrice.jpg',
+  './pax-romana.html',
+  './pax-romana-allenamento.html',
   './',
   './alert.js',
   './allenamento.js',
