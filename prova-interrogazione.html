@@ -145,12 +145,19 @@
       b.className = "ascolta"; b.type = "button"; b.textContent = "🔊 Ascolta la risposta";
       b.addEventListener("click", function(){
         if(on === b){ stop(); return; }
+        var dom = document.querySelector(".card > button.ascolta.on");   // ferma la domanda che sta suonando
+        if(dom) dom.click();
         stop(); p.src = "audio/risposta-" + s.id + ".mp3"; on = b; b.textContent = "⏹ Ferma";
         p.play().catch(stop);
       });
       s.appendChild(b);
     });
     window.addEventListener("pagehide", stop);
+    // premere il tasto di una domanda ferma la risposta che sta suonando
+    document.addEventListener("click", function(e){
+      var t = e.target.closest && e.target.closest(".card > button.ascolta");
+      if(t) stop();
+    }, true);
   })();
 </script>
 <script>
