@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storia - Prova d'interrogazione (lunedì 19/10)</title>
+<link rel="manifest" href="manifest.json">
+<script src="alert.js"></script>
+<meta name="theme-color" content="#FAF6EE">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Storia di Irene">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <a class="backbtn" href="index.html">← Indice</a>
+  <h1>🎤 Prova d'interrogazione</h1>
+  <p class="sub">Lunedì 19 ottobre: la prof ti fa domande, tu rispondi a voce con lo schema davanti</p>
+
+  <div class="card">
+    <h2>📌 Come si gioca</h2>
+    <p>Qui sotto ci sono <b>12 domande</b>, come quelle che può farti la prof.</p>
+    <p>Premi <b>🔊 Ascolta</b>: la domanda te la legge la voce, come in classe.</p>
+    <p>Rispondi <b>ad alta voce</b>, guardando lo <b>schema</b>. Poi apri la risposta e controlla.</p>
+    <div class="tip">🎨 Non serve dire tutto. Bastano <b>2 o 3 frasi</b> giuste. Se ti blocchi, guarda il riquadro dello schema scritto accanto alla domanda.</div>
+  </div>
+
+  <div class="card">
+    <h2>🔑 Il trucco per rispondere: 4 domande</h2>
+    <p>Per ogni fatto di storia rispondi a queste 4 domande, una dopo l'altra:</p>
+    <ul>
+      <li>⏰ <b>Quando?</b> la data</li>
+      <li>👤 <b>Chi?</b> le persone</li>
+      <li>⚡ <b>Cosa?</b> cosa succede</li>
+      <li>❓ <b>Perché?</b> il motivo</li>
+    </ul>
+    <div class="formula">Quando · Chi · Cosa · Perché</div>
+    <p>Esempio: <i>"Nel 44 a.C. (quando) alcuni senatori, tra cui Bruto e Cassio (chi), uccidono Cesare in Senato (cosa), perché hanno paura che voglia diventare re (perché)."</i></p>
+  </div>
+
+  <div class="card">
+    <h2>1. Che cos'era il primo triumvirato?</h2>
+    <p class="sub">📄 Schema Cesare, riquadro 1</p>
+    <button class="solbtn" onclick="toggleSol('s1', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s1"><div class="tip-green">Un'<b>alleanza</b> fatta nel <b>60 a.C.</b> da <b>Cesare, Pompeo e Crasso</b>. Cesare portava i voti della plebe e ottenne il consolato; Pompeo l'esercito e ottenne le terre per i soldati; Crasso i cavalieri e ottenne un esercito in Oriente.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>2. Perché Cesare volle andare a conquistare la Gallia?</h2>
+    <p class="sub">📄 Schema Cesare, riquadro 2</p>
+    <button class="solbtn" onclick="toggleSol('s2', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s2"><div class="tip-green">Perché gli mancavano il <b>prestigio</b> dei generali vittoriosi e un <b>esercito fedele</b>. Dal 58 al 52 a.C. conquista la Gallia; vince la rivolta di <b>Vercingetorige</b> ad <b>Alesia</b>. Così da più debole dei tre diventa il <b>più forte</b>.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>3. Che cosa succede quando Cesare attraversa il Rubicone?</h2>
+    <p class="sub">📄 Schema Cesare, riquadro 3</p>
+    <button class="solbtn" onclick="toggleSol('s3', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s3"><div class="tip-green">Comincia la <b>seconda guerra civile</b> (49 a.C.). Il Senato, d'accordo con Pompeo, gli aveva vietato di fare il console. Cesare vince Pompeo a <b>Farsalo</b> nel 48; Pompeo scappa in Egitto e lì viene ucciso.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>4. Chi è Cleopatra e che cosa c'entra con Cesare?</h2>
+    <p class="sub">📄 Schema Cesare, riquadro 3</p>
+    <button class="solbtn" onclick="toggleSol('s4', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s4"><div class="tip-green">È la sorella del faraone <b>Tolomeo</b>, che aveva fatto uccidere Pompeo. Cesare toglie il trono a Tolomeo e lo dà a <b>Cleopatra</b>.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>5. Come governa Cesare quando diventa signore di Roma?</h2>
+    <p class="sub">📄 Schema Cesare, riquadro 4</p>
+    <button class="solbtn" onclick="toggleSol('s5', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s5"><div class="tip-green">Non si fa re, ma prende le cariche della repubblica: <b>console</b> per tanti anni e <b>dittatore a vita</b>. Dà la cittadinanza alla <b>Gallia Cisalpina</b>, porta i senatori da <b>600 a 900</b>, fa <b>lavori pubblici</b> per la plebe e crea il <b>calendario giuliano</b>.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>6. Perché e come muore Cesare?</h2>
+    <p class="sub">📄 Schema Cesare, riquadro 5</p>
+    <button class="solbtn" onclick="toggleSol('s6', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s6"><div class="tip-green">Alcuni senatori hanno paura che voglia diventare <b>re</b>. <b>Bruto e Cassio</b> fanno una congiura e lo pugnalano in Senato alle <b>idi di marzo</b>, il <b>15 marzo 44 a.C.</b></div></div>
+  </div>
+
+  <div class="card">
+    <h2>7. Che cosa succede dopo la morte di Cesare?</h2>
+    <p class="sub">📄 Schema Cesare, riquadro 6</p>
+    <button class="solbtn" onclick="toggleSol('s7', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s7"><div class="tip-green">Nasce il <b>secondo triumvirato</b>: <b>Ottaviano, Antonio e Lepido</b>. Poi Ottaviano combatte contro <b>Antonio e Cleopatra</b> e vince ad <b>Azio</b> nel <b>31 a.C.</b> Nel <b>27 a.C.</b> diventa <b>Augusto</b>, il primo imperatore.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>8. Che cos'è la pax romana?</h2>
+    <p class="sub">📄 Schema Pax romana, riquadro in alto</p>
+    <button class="solbtn" onclick="toggleSol('s8', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s8"><div class="tip-green">È il lungo periodo di <b>pace dentro l'Impero</b>, da Augusto fino alla fine del <b>II secolo d.C.</b> La pace fa crescere tre cose: i <b>commerci</b>, l'<b>agricoltura</b> e le <b>città</b>.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>9. Perché durante la pax romana crescono i commerci?</h2>
+    <p class="sub">📄 Schema Pax romana, riquadro 1</p>
+    <button class="solbtn" onclick="toggleSol('s9', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s9"><div class="tip-green">Perché c'è <b>un solo Stato</b> con <b>una sola moneta</b>, non ci sono <b>pirati e briganti</b> e ci sono <b>strade</b> efficienti. Un mercante può andare dalla Siria alla Britannia senza uscire dall'Impero.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>10. Che differenza c'è tra una domus e un'insula?</h2>
+    <p class="sub">📄 Schema Pax romana, riquadro 4</p>
+    <button class="solbtn" onclick="toggleSol('s10', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s10"><div class="tip-green">La <b>domus</b> è la casa dei <b>ricchi</b>: ha l'<b>atrio</b>, dove il padrone riceve i clienti, e il <b>peristilio</b>, un giardino con statue e mosaici. L'<b>insula</b> è il palazzo della <b>plebe</b>: appartamenti piccoli e bui, rischio di <b>crolli</b> e di <b>incendi</b>.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>11. Che differenza c'è tra senatori e cavalieri?</h2>
+    <p class="sub">📄 Schema Pax romana, riquadro 5</p>
+    <button class="solbtn" onclick="toggleSol('s11', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s11"><div class="tip-green">I <b>senatori</b> devono avere <b>un milione di sesterzi</b>, il loro posto passa ai figli e sono ricchi grazie alle <b>terre</b>. I <b>cavalieri</b> devono avere <b>400.000 sesterzi</b>, il posto non passa ai figli e sono ricchi grazie ai <b>commerci</b>.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>12. Come vive la plebe di Roma?</h2>
+    <p class="sub">📄 Schema Pax romana, riquadri 5 e 6</p>
+    <button class="solbtn" onclick="toggleSol('s12', this)">🔑 Mostra soluzioni</button>
+    <div class="sol" id="s12"><div class="tip-green">La plebe non ha soldi, vive di lavoretti, della <b>carità</b> e del <b>grano</b> dato dallo Stato: chiede solo <b>panem et circenses</b>, pane e giochi. Con l'<b>evergetismo</b> i ricchi regalano alla città edifici e giochi, e così la plebe sta tranquilla.</div></div>
+  </div>
+
+  <div class="allena">
+    🎉 Se hai risposto a voce a tutte e 12, lunedì sei pronta!<br>
+    <a href="index.html">🏛️ Torna all'indice</a>
+  </div>
+
+  <footer>🔗 <a href="index.html">Indice</a> · 🏛️ <a href="cesare.html">Cesare</a> · 🕊️ <a href="pax-romana.html">Pax romana</a></footer>
+</div>
+<script src="app.js"></script>
+<script>
+  // 🔊 dentro ogni risposta: la fa sentire a voce (audio/risposta-sN.mp3, da strumenti/genera-risposte.py)
+  (function(){
+    var p = new Audio(), on = null;
+    function stop(){ p.pause(); if(on){ on.textContent = "🔊 Ascolta la risposta"; on = null; } }
+    p.addEventListener("ended", stop);
+    document.querySelectorAll("div.sol[id]").forEach(function(s){
+      var b = document.createElement("button");
+      b.className = "ascolta"; b.type = "button"; b.textContent = "🔊 Ascolta la risposta";
+      b.addEventListener("click", function(){
+        if(on === b){ stop(); return; }
+        stop(); p.src = "audio/risposta-" + s.id + ".mp3"; on = b; b.textContent = "⏹ Ferma";
+        p.play().catch(stop);
+      });
+      s.appendChild(b);
+    });
+    window.addEventListener("pagehide", stop);
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./service-worker.js'); }
+</script>
+</body>
+</html>

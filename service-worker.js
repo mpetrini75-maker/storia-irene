@@ -1,4 +1,4 @@
-const CACHE = 'storia-irene-v2';
+const CACHE = 'storia-irene-v3';
 
 const ASSETS = [
   './img/pax-domus.jpg',
@@ -22,6 +22,7 @@ const ASSETS = [
   './index.html',
   './manifest.json',
   './presentazione-cesare.html',
+  './prova-interrogazione.html',
   './style.css',
 ];
 

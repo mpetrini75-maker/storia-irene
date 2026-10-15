@@ -14,7 +14,7 @@ R = Path(__file__).resolve().parent.parent
 AUDIO = R / "audio"
 VOCE = "it-IT-ElsaNeural"   # provino "tre" scelto da Marco il 03/10: piu' veloce e piu' acuta, da ragazzina sveglia
 RATE, PITCH = "+0%", "+15Hz"   # era +20%: Marco il 04/10 "troppo veloce", rallentata come in Tedesco
-LEZIONI = ["cesare", "presentazione-cesare", "pax-romana"]
+LEZIONI = ["cesare", "presentazione-cesare", "pax-romana", "prova-interrogazione"]
 EMOJI = re.compile("[\U0001F000-\U0001FAFF☀-➿⬀-⯿️‍]")
 
 
@@ -80,7 +80,7 @@ async def main():
             fatti += 1
             print(f"  {nome}: {len(testo)} caratteri")
     for f in AUDIO.glob("*.mp3"):
-        if f.name not in nuovo:
+        if f.name not in nuovo and not f.name.startswith("risposta-"):   # le risposte le fa genera-risposte.py
             f.unlink()
             print("  tolto", f.name)
     indice_f.write_text(json.dumps(nuovo, indent=1), encoding="utf-8")
